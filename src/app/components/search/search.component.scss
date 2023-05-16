@@ -1,0 +1,29 @@
+.search-input {
+    width: 200px;
+  }
+  
+  .search-input::placeholder {
+    text-indent: 10px;
+  }
+  
+  .search-button {
+    background-color: #fff;
+    border-color: #ccc;
+  }
+  
+  .search-button:hover {
+    background-color: #eee;
+  }
+  
+  .search-button:focus {
+    box-shadow: none;
+  }
+  
+  .search-button svg {
+    width: 100%;
+    height: 100%;
+    fill: #000;
+  }
+
+  
+
