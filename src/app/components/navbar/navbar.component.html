@@ -1,10 +1,15 @@
-
 <nav>
   <a href="/home"><img [src]="'/assets/logo.jpeg'" alt="Logo" class="nav-img"></a>
   <ul>
     <li><a href="/personal">Personal</a></li>
     <li><a href="/residencia">Residencia y Bienestar</a></li>
-    <li class="sign-in"><a href="/login" class="sign-text">Iniciar Sesión</a></li>
+    <ng-container *ngIf="!isLoggedIn; else cerrarSesion">
+      <li class="sign-in"><a href="/login" class="sign-text">Iniciar Sesión</a></li>
+    </ng-container>
+    <ng-template #cerrarSesion>
+      <li class="sign-in"><a (click)="desloguear()" class="sign-text">Cerrar
+          Sesión</a></li>
+    </ng-template>
     <app-user-nav></app-user-nav>
   </ul>
 </nav>
