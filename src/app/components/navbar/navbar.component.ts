@@ -22,6 +22,7 @@ export class NavbarComponent {
   public onLinkClick(): void{
     if(!this.isLoggedIn){
       alert("Debe Iniciar Sesión para acceder a la informacion del personal")
+      this.router.navigate(['login'])
     }else {
       this.router.navigate(['personal']);
     }

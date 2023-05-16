@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ResidenciaComponent } from './pages/residencia/residencia.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PersonalComponent } from './pages/personal/personal.component';
+import { adminGuard } from './admin-guard.service';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [adminGuard],
     loadChildren:() => import('./admin/admin.module').then(m => m.AdminModule)
   }
 
