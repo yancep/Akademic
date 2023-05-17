@@ -15,10 +15,6 @@ export class CrearUsuarioComponent {
     private http: HttpClient
   ){this.buildForm();}
 
-  
-
-  
-
   saveUser(event: Event){
     event.preventDefault();
     if(this.form.valid){
