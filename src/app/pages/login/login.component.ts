@@ -20,8 +20,8 @@ export class LoginComponent {
 
   onSubmit() {
     const data = {
-      user: this.user,
-      password: this.password
+      usuario: this.user,
+      contraseña: this.password
     };
     
     this.http.post('https://localhost:8080/usuarios/verificar', data).subscribe(

@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfesorFormComponent } from './components/profesor-form/profesor-form.component';
 import { NavComponent } from './components/nav/nav.component';
-import { EstudianteFormComponent } from './components/estudiante-form/estudiante-form.component';
-import { ListaEstudiantesComponent } from './components/lista-estudiantes/lista-estudiantes.component';
-import { ListaProfesoresComponent } from './components/lista-profesores/lista-profesores.component';
+import { ListaPersonalComponent } from './components/lista-personal/lista-personal.component';
+import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 
 const routes: Routes = [
   
@@ -13,21 +11,14 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       {
-        path: 'crearProfesor',
-        component: ProfesorFormComponent,
+        path: 'personal',
+        component: ListaPersonalComponent,
       },
       {
-        path: 'crearEstudiante',
-        component: EstudianteFormComponent,
+        path: 'personal/crearUsuario',
+        component: CrearUsuarioComponent,
       },
-      {
-        path: 'listaEstudiantes',
-        component: ListaEstudiantesComponent,
-      },
-      {
-        path: 'listaProfesores',
-        component: ListaProfesoresComponent,
-      },
+      
     ]
   }
    

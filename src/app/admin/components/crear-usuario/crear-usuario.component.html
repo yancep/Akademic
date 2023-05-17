@@ -1,0 +1,100 @@
+<form [formGroup]="form" (ngSubmit)="saveUser($event)">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Usuario
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input formControlName="usuario" placeholder="usuario"
+                            matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="contraseña"
+                            formControlName="contraseña" matInput
+                            type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="nombre" formControlName="nombre"
+                            matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="correo" formControlName="correo"
+                            matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="facultad" formControlName="facultad"
+                            matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="grupo" formControlName="grupo"
+                            matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="carnet" formControlName="carnet"
+                            matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="año" formControlName="año" matInput
+                            type="number">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-checkbox formControlName="profesor" type="checkbox">
+                        Profesor
+                    </mat-checkbox>
+                </div>
+                <div class="col-xs">
+                    <mat-checkbox formControlName="estudiante" type="checkbox">
+                        Estudiante
+                    </mat-checkbox>
+                </div>
+                <div class="col-xs">
+                    <mat-checkbox formControlName="admin" type="checkbox">
+                        Administrador
+                    </mat-checkbox>
+                </div>
+            </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button type="submit">Crear</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
