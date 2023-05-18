@@ -17,6 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonalComponent } from './pages/personal/personal.component';
 import { AuthService } from './auth.service';
+import { MaterialModule } from './material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,8 @@ import { AuthService } from './auth.service';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
