@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { query } from '@angular/animations';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
@@ -34,8 +34,8 @@ export class PersonalComponent implements OnInit {
   }
 
   getUsuario(query: string){
-    
-    this.http.get('http://localhost:8080/usuarios/buscar', {params: {subcadena: query}}).subscribe(response =>{
+    const params = new HttpParams().set('subcadena', query);
+    this.http.get('http://localhost:8080/usuarios/buscar', {params}).subscribe(response =>{
       this.usuarios = response as any
     }, error => {
       if (error.status === 401) {
