@@ -1,5 +1,11 @@
-<app-navbar></app-navbar>
-<div class="container">
-
+<div fxLayout="row" fxLayoutAlign="center center">
+    <input type="text" placeholder="Buscar..." [formControl]="control">
+    <div *ngIf="mensajeError" class="error" class="error">{{
+        mensajeError }}</div>
 </div>
-<app-footer></app-footer>
+<div *ngFor="let user of usuarios">
+    {{user.usuario}}
+    {{user.nombre}}
+    {{user.correo}}
+    {{user.facultad}}
+</div>
