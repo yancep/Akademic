@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { UsersService } from '../../users.service';
 
 @Component({
   selector: 'app-crear-usuario',
@@ -12,14 +13,14 @@ export class CrearUsuarioComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private usersService: UsersService,
   ){this.buildForm();}
 
   saveUser(event: Event){
     event.preventDefault();
     if(this.form.valid){
       const usuario = this.form.value;
-      this.http.post('http://localhost:8080/usuarios/adicionar', usuario).subscribe(
+      this.usersService.createUser(usuario).subscribe(
         response => {
           const data = response as any
           console.log(response)

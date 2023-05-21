@@ -28,5 +28,12 @@ export class ListaPersonalComponent implements OnInit{
     })
   }
 
+  deleteUser(nombre: string){
+    this.usersService.deleteUser(nombre)
+    .subscribe(rta => {
+      console.log(rta);
+    })
+  }
+
 
 }

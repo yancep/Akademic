@@ -12,4 +12,11 @@ export class UsersService{
         return this.http.get<Usuario[]>('http://localhost:8080/usuarios/buscarTodos');
     }
 
+    createUser(usuario: Usuario){
+        return this.http.post('http://localhost:8080/usuarios/adicionar', usuario)
+    }
+
+    deleteUser(nombre: string){
+        return this.http.delete('http://localhost:8080/usuarios/borrar')
+    }
 }

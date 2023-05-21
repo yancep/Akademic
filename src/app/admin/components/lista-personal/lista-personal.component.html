@@ -14,7 +14,11 @@
     </ng-container>
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions </th>
-        <button mat-button>Eliminar</button>
+        <td mat-cell *matCellDef="let usuario">
+            <button mat-button>Eliminar</button>
+            <button mat-raised-button color="warn"
+                (click)="deleteUser(usuario.nombre)">Editar</button>
+        </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
