@@ -45,7 +45,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     HttpClientModule,
     MaterialModule,
-    FlexLayoutModule
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -34,15 +34,13 @@ export class PersonalComponent implements OnInit {
   }
 
   getUsuario(query: string){
-    
-    this.http.get('http://localhost:8080/usuarios/buscar', {params: {subcadena: query}}).subscribe(response =>{
+    // Asumiendo que tienes una variable tipo que guarda el valor del campo por el que quieres buscar
+    this.http.post('http://localhost:8080/usuarios/buscar', {subcadena: query, tipo: "nombre"}).subscribe(response =>{
       this.usuarios = response as any
     }, error => {
       if (error.status === 401) {
         this.mensajeError = 'Usuario o contraseña incorrectos';
       }
     })
-    
-
   }
 }
