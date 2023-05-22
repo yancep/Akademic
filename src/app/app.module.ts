@@ -18,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PersonalComponent } from './pages/personal/personal.component';
 import { AuthService } from './auth.service';
 import { MaterialModule } from './material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+//import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({

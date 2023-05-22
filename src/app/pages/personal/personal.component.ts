@@ -34,8 +34,7 @@ export class PersonalComponent implements OnInit {
   }
 
   getUsuario(query: string){
-    const params = new HttpParams().set('subcadena', query);
-    this.http.get('http://localhost:8080/usuarios/buscar', {params}).subscribe(response =>{
+    this.http.post('http://localhost:8080/usuarios/buscar', {subcadena: query, tipo: "nombre"}).subscribe(response =>{
       this.usuarios = response as any
     }, error => {
       if (error.status === 401) {
